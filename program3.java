@@ -1,22 +1,21 @@
-package Looping;
-import java.util.Scanner;
-public class program3 {
+package Number_based;
+
+public class Program3 {
 
 	public static void main(String[] args) {
+		int num = 234; 
+        int sum = 0;
 
-   
-		Scanner sc=new Scanner(System.in);
-		System.out.println("enter input:");
-		int n=sc.nextInt();
-		int c;
-		System.out.println("Output:");
-		for(int i=1;i<=10;i++)
-			
-		{
-			c=i*n;
-			System.out.print(c+"\t");
-		}
-		
+
+        num = Math.abs(num);
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit;      
+            num = num / 10;     
+        }
+
+        System.out.println(sum);
 
 	}
 
